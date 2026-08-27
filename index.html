@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jamaican Vybez Roots | Taste Evaluation</title>
+
+  <meta
+    name="description"
+    content="Help Jamaican Vybez Roots improve our product by sharing your tasting experience."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <!-- HEADER -->
+    <header class="brand-header">
+      <div class="brand-mark">JVR</div>
+
+      <div>
+        <h1>Jamaican Vybez Roots</h1>
+        <p>Product Taste Evaluation</p>
+      </div>
+    </header>
+
+
+    <!-- AGE GATE -->
+    <section id="ageScreen" class="screen active">
+
+      <div class="card hero-card">
+
+        <div class="icon">🥃</div>
+
+        <h2>Thank You for Tasting JVR</h2>
+
+        <p>
+          We want to know what you really think.
+          Your feedback will help us refine Jamaican Vybez Roots
+          and create the best possible product.
+        </p>
+
+        <div class="age-warning">
+          <strong>Age Confirmation</strong>
+
+          <p>
+            This evaluation concerns an alcoholic beverage.
+            You must be of legal drinking age in your location
+            to participate.
+          </p>
+        </div>
+
+        <button id="ageYes" class="primary-btn">
+          I am of legal drinking age
+        </button>
+
+        <button id="ageNo" class="secondary-btn">
+          I am not of legal drinking age
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- TOO YOUNG -->
+    <section id="underageScreen" class="screen">
+
+      <div class="card center">
+
+        <div class="icon">🔞</div>
+
+        <h2>Thank You</h2>
+
+        <p>
+          You cannot participate in this tasting evaluation.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- WELCOME -->
+    <section id="welcomeScreen" class="screen">
+
+      <div class="card">
+
+        <span class="step-label">BEFORE YOU BEGIN</span>
+
+        <h2>Tell Us What You Really Think</h2>
+
+        <p>
+          There are no right or wrong answers.
+          We want your honest opinion about the taste,
+          texture, herbal essence, alcohol balance,
+          and your overall experience.
+        </p>
+
+        <p>
+          The evaluation should take approximately
+          <strong>2–3 minutes.</strong>
+        </p>
+
+        <button id="startBtn" class="primary-btn">
+          Start Evaluation
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- SURVEY -->
+    <section id="surveyScreen" class="screen">
+
+      <form id="surveyForm">
+
+        <!-- PROGRESS -->
+        <div class="progress-container">
+
+          <div class="progress-info">
+            <span id="progressText">Question 1</span>
+            <span id="progressPercent">0%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div id="progressFill"></div>
+          </div>
+
+        </div>
+
+
+        <!-- QUESTION 1 -->
+        <div class="question card active-question" data-question="1">
+
+          <span class="step-label">QUESTION 1 OF 12</span>
+
+          <h2>How smooth was the taste?</h2>
+
+          <p class="question-help">
+            Think about how easily the drink goes down.
+          </p>
+
+          <div class="rating-buttons">
+
+            <label>
+              <input type="radio" name="smoothness" value="1">
+              <span>1<br><small>Very Rough</small></span>
+            </label>
+
+            <label>
+              <input type="radio" name="smoothness" value="2">
+              <span>2</span>
+            </label>
+
+            <label>
+              <input type="radio" name="smoothness" value="3">
+              <span>3</span>
+            </label>
+
+            <label>
+              <input type="radio" name="smoothness" value="4">
+              <span>4</span>
+            </label>
+
+            <label>
+              <input type="radio" name="smoothness" value="5">
+              <span>5<br><small>Very Smooth</small></span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+        <div class="question card" data-question="2">
+
+          <span class="step-label">QUESTION 2 OF 12</span>
+
+          <h2>How would you describe the creaminess?</h2>
+
+          <div class="rating-buttons">
+
+            <label>
+              <input type="radio" name="creaminess" value="1">
+              <span>1</span>
+            </label>
+
+            <label>
+              <input type="radio" name="creaminess" value="2">
+              <span>2</span>
+            </label>
+
+            <label>
+              <input type="radio" name="creaminess" value="3">
+              <span>3</span>
+            </label>
+
+            <label>
+              <input type="radio" name="creaminess" value="4">
+              <span>4</span>
+            </label>
+
+            <label>
+              <input type="radio" name="creaminess" value="5">
+              <span>5</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+        <div class="question card" data-question="3">
+
+          <span class="step-label">QUESTION 3 OF 12</span>
+
+          <h2>Could you taste the herbal/root essence?</h2>
+
+          <p class="question-help">
+            How noticeable was the distinctive herbal character?
+          </p>
+
+          <div class="choice-list">
+
+            <label>
+              <input type="radio" name="herbal" value="not-at-all">
+              <span>Not at all</span>
+            </label>
+
+            <label>
+              <input type="radio" name="herbal" value="slightly">
+              <span>Slightly</span>
+            </label>
+
+            <label>
+              <input type="radio" name="herbal" value="moderately">
+              <span>Moderately</span>
+            </label>
+
+            <label>
+              <input type="radio" name="herbal" value="strongly">
+              <span>Strongly</span>
+            </label>
+
+            <label>
+              <input type="radio" name="herbal" value="very-strongly">
+              <span>Very strongly</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+        <div class="question card" data-question="4">
+
+          <span class="step-label">QUESTION 4 OF 12</span>
+
+          <h2>How noticeable was the alcohol?</h2>
+
+          <div class="rating-buttons">
+
+            <label>
+              <input type="radio" name="alcoholTaste" value="1">
+              <span>1<br><small>Not Noticeable</small></span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholTaste" value="2">
+              <span>2</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholTaste" value="3">
+              <span>3</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholTaste" value="4">
+              <span>4</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholTaste" value="5">
+              <span>5<br><small>Very Noticeable</small></span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+        <div class="question card" data-question="5">
+
+          <span class="step-label">QUESTION 5 OF 12</span>
+
+          <h2>How do you feel about the alcohol strength?</h2>
+
+          <div class="choice-list">
+
+            <label>
+              <input type="radio" name="alcoholStrength" value="much-too-weak">
+              <span>Much too weak</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholStrength" value="too-weak">
+              <span>A little too weak</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholStrength" value="just-right">
+              <span>Just right</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholStrength" value="too-strong">
+              <span>A little too strong</span>
+            </label>
+
+            <label>
+              <input type="radio" name="alcoholStrength" value="much-too-strong">
+              <span>Much too strong</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 6 -->
+        <div class="question card" data-question="6">
+
+          <span class="step-label">QUESTION 6 OF 12</span>
+
+          <h2>How would you describe the sweetness?</h2>
+
+          <div class="choice-list">
+
+            <label>
+              <input type="radio" name="sweetness" value="much-too-low">
+              <span>Much too low</span>
+            </label>
+
+            <label>
+              <input type="radio" name="sweetness" value="too-low">
+              <span>A little too low</span>
+            </label>
+
+            <label>
+              <input type="radio" name="sweetness" value="just-right">
+              <span>Just right</span>
+            </label>
+
+            <label>
+              <input type="radio" name="sweetness" value="too-sweet">
+              <span>A little too sweet</span>
+            </label>
+
+            <label>
+              <input type="radio" name="sweetness" value="much-too-sweet">
+              <span>Much too sweet</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 7 -->
+        <div class="question card" data-question="7">
+
+          <span class="step-label">QUESTION 7 OF 12</span>
+
+          <h2>How would you rate the overall taste?</h2>
+
+          <div class="rating-buttons large">
+
+            <label>
+              <input type="radio" name="taste" value="1">
+              <span>1</span>
+            </label>
+
+            <label>
+              <input type="radio" name="taste" value="2">
+              <span>2</span>
+            </label>
+
+            <label>
+              <input type="radio" name="taste" value="3">
+              <span>3</span>
+            </label>
+
+            <label>
+              <input type="radio" name="taste" value="4">
+              <span>4</span>
+            </label>
+
+            <label>
+              <input type="radio" name="taste" value="5">
+              <span>5</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 8 -->
+        <div class="question card" data-question="8">
+
+          <span class="step-label">QUESTION 8 OF 12</span>
+
+          <h2>How would you rate JVR overall?</h2>
+
+          <p class="question-help">
+            Give us your honest overall product score.
+          </p>
+
+          <div class="score-grid">
+
+            <label><input type="radio" name="overallScore" value="1"><span>1</span></label>
+            <label><input type="radio" name="overallScore" value="2"><span>2</span></label>
+            <label><input type="radio" name="overallScore" value="3"><span>3</span></label>
+            <label><input type="radio" name="overallScore" value="4"><span>4</span></label>
+            <label><input type="radio" name="overallScore" value="5"><span>5</span></label>
+            <label><input type="radio" name="overallScore" value="6"><span>6</span></label>
+            <label><input type="radio" name="overallScore" value="7"><span>7</span></label>
+            <label><input type="radio" name="overallScore" value="8"><span>8</span></label>
+            <label><input type="radio" name="overallScore" value="9"><span>9</span></label>
+            <label><input type="radio" name="overallScore" value="10"><span>10</span></label>
+
+          </div>
+
+          <div class="scale-labels">
+            <span>Not for me</span>
+            <span>Absolutely love it</span>
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 9 -->
+        <div class="question card" data-question="9">
+
+          <span class="step-label">QUESTION 9 OF 12</span>
+
+          <h2>Is Jamaican Vybez Roots for you?</h2>
+
+          <div class="choice-list">
+
+            <label>
+              <input type="radio" name="forMe" value="yes">
+              <span>Yes — this is definitely for me</span>
+            </label>
+
+            <label>
+              <input type="radio" name="forMe" value="maybe">
+              <span>Maybe — I would consider it</span>
+            </label>
+
+            <label>
+              <input type="radio" name="forMe" value="no">
+              <span>No — this isn't for me</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 10 -->
+        <div class="question card" data-question="10">
+
+          <span class="step-label">QUESTION 10 OF 12</span>
+
+          <h2>Would you recommend JVR to someone else?</h2>
+
+          <div class="choice-list">
+
+            <label>
+              <input type="radio" name="recommend" value="definitely">
+              <span>Definitely</span>
+            </label>
+
+            <label>
+              <input type="radio" name="recommend" value="probably">
+              <span>Probably</span>
+            </label>
+
+            <label>
+              <input type="radio" name="recommend" value="maybe">
+              <span>Maybe</span>
+            </label>
+
+            <label>
+              <input type="radio" name="recommend" value="probably-not">
+              <span>Probably not</span>
+            </label>
+
+            <label>
+              <input type="radio" name="recommend" value="definitely-not">
+              <span>Definitely not</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 11 -->
+        <div class="question card" data-question="11">
+
+          <span class="step-label">QUESTION 11 OF 12</span>
+
+          <h2>Would you tell your family or friends about JVR?</h2>
+
+          <div class="choice-list">
+
+            <label>
+              <input type="radio" name="tellOthers" value="yes">
+              <span>Yes</span>
+            </label>
+
+            <label>
+              <input type="radio" name="tellOthers" value="maybe">
+              <span>Maybe</span>
+            </label>
+
+            <label>
+              <input type="radio" name="tellOthers" value="no">
+              <span>No</span>
+            </label>
+
+          </div>
+
+          <button type="button" class="primary-btn next-btn">
+            Continue
+          </button>
+
+        </div>
+
+
+        <!-- QUESTION 12 -->
+        <div class="question card" data-question="12">
+
+          <span class="step-label">FINAL QUESTION</span>
+
+          <h2>What could we do to make JVR better for you?</h2>
+
+          <p class="question-help">
+            Tell us anything you would change about the product.
+          </p>
+
+          <textarea
+            name="improvements"
+            id="improvements"
+            placeholder="Your honest feedback..."
+            maxlength="1000"
+          ></textarea>
+
+          <div class="character-count">
+            <span id="characterCount">0</span>/1000
+          </div>
+
+          <button type="submit" class="primary-btn">
+            Submit My Evaluation
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- THANK YOU -->
+    <section id="thankYouScreen" class="screen">
+
+      <div class="card center thank-you">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Thank You!</h2>
+
+        <p>
+          Your feedback has been recorded.
+        </p>
+
+        <p>
+          Every evaluation helps us make Jamaican Vybez Roots
+          better.
+        </p>
+
+        <div class="score-result">
+
+          <span>Your Overall Score</span>
+
+          <strong>
+            <span id="finalScore">—</span>/10
+          </strong>
+
+        </div>
+
+        <p class="closing">
+          Thank you for being part of the JVR journey.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      <p>© <span id="year"></span> Jamaican Vybez Roots Limited</p>
+      <p>Product Evaluation Portal</p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
